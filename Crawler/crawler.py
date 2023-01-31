@@ -1,10 +1,8 @@
 ##Import Packages
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-
-
+#URL of the webpage that we are scraping information from
 BASE_URL="https://www.esky.bg/oferti/co/bg/0/0/balgariya"
 
 
@@ -14,8 +12,23 @@ class Crawler:
 
         self.driver=webdriver.Chrome()
 
-    def take_headwords(self):
-        pass
+    def take_information(self):  #This method takes all the information elements and appends them to the info list.
+        info=[]
+
+        #Take all Information divs
+        divs=self.driver.find_elements(By.CLASS_NAME,".deal-group")
+
+        #We loop through the found elements, and for each of them, we find all the elements with the tag name li.
+        for div in divs:
+            ul=div.find_elements(By.TAG_NAME,"li")
+            for li in ul:
+                arrival_country=li.find_element(By.CLASS_NAME,"arrival-country").text
+                arrival_city=li.find_element(By.CLASS_NAME,"arrival-city").text
+                price_amount=li.find_element(By.CLASS_NAME,"price-amount").text
+                info.append([arrival_country,arrival_city,price_amount])
+                print([arrival_country,arrival_city,price_amount])
+
+        return info
 
     def get_html(self):
         #Driver takes URL
@@ -27,14 +40,14 @@ class Crawler:
         #Open All Deals
         btnMoreDeals=self.driver.find_element(By.CSS_SELECTOR, ".show-more-deals").click()
 
+        content=self.take_information()
 
 
+    def start(self):    #This method starts the scraping process.
+        self.crawling=self.get_html()
 
-    def start(self):
-        pass
-
-    def stop(self):
-        pass
+    def stop(self):     #This method stops the scraping process.
+        self.driver.quit()
 
 
 
