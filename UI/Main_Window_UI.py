@@ -35,13 +35,20 @@ class Ui_Form(object):
         self.btnRunCrawler = QtWidgets.QPushButton(Form)
         self.btnRunCrawler.setGeometry(QtCore.QRect(350, 540, 161, 61))
         self.btnRunCrawler.setStyleSheet("border-image: url(:/logo/source.qrc);\n"
-"background-color: rgb(172, 172, 172);\n"
-"")
+        "background-color: rgb(172, 172, 172);\n"
+        " font-size: 16px;\n"
+        "border-radius: 7px;\n"
+        "color: #6A5ACD;\n"
+        )
         self.btnRunCrawler.setObjectName("btnRunCrawler")
         self.btnShowData = QtWidgets.QPushButton(Form)
         self.btnShowData.setGeometry(QtCore.QRect(540, 540, 161, 61))
         self.btnShowData.setStyleSheet("border-image: url(:/logo/source.qrc);\n"
-"background-color: rgb(172, 172, 172);")
+        "background-color: rgb(172, 172, 172);\n"
+        " font-size: 16px;\n"
+        "border-radius: 7px;\n"
+        "color: #6A5ACD;\n"
+        )
         self.btnShowData.setObjectName("btnShowData")
 
         self.retranslateUi(Form)
