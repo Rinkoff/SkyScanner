@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>786</width>
+    <height>654</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(56, 56, 56);
+border-image: url(:/plane_border/plane.png);</string>
+  </property>
+  <widget class="QLabel" name="lbllogo">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>-20</y>
+     <width>801</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bodoni MT Black</family>
+     <pointsize>60</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/logo/source.qrc);
+</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#655f70;&quot;&gt;SkyScanner&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnRunCrawler">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>540</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/logo/source.qrc);
+background-color: rgb(172, 172, 172);
+</string>
+   </property>
+   <property name="text">
+    <string>Run Crawler</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnShowData">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>540</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/logo/source.qrc);
+background-color: rgb(172, 172, 172);</string>
+   </property>
+   <property name="text">
+    <string>Show data</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../assets/Images/source.qrc"/>
+ </resources>
+ <connections/>
+</ui>
