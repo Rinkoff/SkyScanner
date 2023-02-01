@@ -6,7 +6,7 @@ import os
 package_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Define a function to read the database configuration file
-def read_db_congig(filename="config.ini",section="MySQL"):
+def read_db_config(filename="config.ini",section="MySQL"):
     # Create a parser object
     parser=ConfigParser()
 
