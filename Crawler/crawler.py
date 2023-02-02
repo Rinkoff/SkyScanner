@@ -40,6 +40,10 @@ class Crawler:
         #Open All Deals
         btnMoreDeals=self.driver.find_element(By.CSS_SELECTOR, ".show-more-deals").click()
 
+        # Scroll to the bottom
+        for _ in range(50):
+            self.driver.execute_script("window.scrollBy(0,250)","")
+
         content=self.take_information()
 
 
