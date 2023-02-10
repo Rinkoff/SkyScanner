@@ -16,7 +16,7 @@ class Crawler:
         info=[]
 
         #Take all Information divs
-        divs=self.driver.find_elements(By.CLASS_NAME,".deal-group")
+        divs=self.driver.find_elements(By.CLASS_NAME,"deal-group")
 
         #We loop through the found elements, and for each of them, we find all the elements with the tag name li.
         for div in divs:
@@ -26,9 +26,7 @@ class Crawler:
                 arrival_city=li.find_element(By.CLASS_NAME,"arrival-city").text
                 price_amount=li.find_element(By.CLASS_NAME,"price-amount").text
                 info.append([arrival_country,arrival_city,price_amount])
-                print([arrival_country,arrival_city,price_amount])
 
-        return info
 
     def get_html(self):
         #Driver takes URL
@@ -44,7 +42,7 @@ class Crawler:
         for _ in range(50):
             self.driver.execute_script("window.scrollBy(0,250)","")
 
-        content=self.take_information()
+        self.take_information()
 
 
     def start(self):    #This method starts the scraping process.
