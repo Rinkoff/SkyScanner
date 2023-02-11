@@ -13,7 +13,8 @@ class Crawler:
         self.driver=webdriver.Chrome()
 
     def take_information(self):  #This method takes all the information elements and appends them to the info list.
-        info=[]
+
+        self.info=[]
 
         #Take all Information divs
         divs=self.driver.find_elements(By.CLASS_NAME,"deal-group")
@@ -25,7 +26,8 @@ class Crawler:
                 arrival_country=li.find_element(By.CLASS_NAME,"arrival-country").text
                 arrival_city=li.find_element(By.CLASS_NAME,"arrival-city").text
                 price_amount=li.find_element(By.CLASS_NAME,"price-amount").text
-                info.append([arrival_country,arrival_city,price_amount])
+                self.info.append([arrival_country,arrival_city,price_amount])
+        print(self.info)
 
 
     def get_html(self):
