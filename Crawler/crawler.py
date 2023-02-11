@@ -27,7 +27,6 @@ class Crawler:
                 arrival_city=li.find_element(By.CLASS_NAME,"arrival-city").text
                 price_amount=li.find_element(By.CLASS_NAME,"price-amount").text
                 self.info.append([arrival_country,arrival_city,price_amount])
-        print(self.info)
 
 
     def get_html(self):
