@@ -30,7 +30,7 @@ class DB():
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 Country VARCHAR(100) NOT NULL,
                 City VARCHAR(100) NOT NULL,
-                Price INT NOT NULL
+                Price VARCHAR(20) NOT NULL
                 );
         """
 
@@ -57,7 +57,7 @@ class DB():
         mysql = """
                 INSERT IGNORE INTO scanner
                 (Country,City,Price)
-                VALUES (%s, %s, CONCAT(%s, "€"))
+                VALUES (%s, %s, CONCAT(%s, " €"))
             """
         try:
             #Insert one row in table
