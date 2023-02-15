@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="logo">
+    <file>source.qrc</file>
+    <file>logo.png</file>
+  </qresource>
+  <qresource prefix="plane_border">
+    <file>plane.png</file>
+  </qresource>
+</RCC>
