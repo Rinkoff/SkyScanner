@@ -106,6 +106,15 @@ class Table_view(qtw.QWidget, Table_Ui_Form):
                     else:
                         item = qtg.QStandardItem(str(field))
 
+                # Change color to text in fields
+                item.setForeground(qtg.QColor("silver"))
+                # Make font bold
+                font = qtg.QFont()
+                font.setBold(True)
+                font.setPointSize(10)
+                item.setFont(font)
+
+
                 items.append(item)
 
             model.insertRow(i, items)

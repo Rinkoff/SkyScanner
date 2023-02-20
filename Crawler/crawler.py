@@ -1,4 +1,6 @@
 ##Import Packages
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -42,9 +44,9 @@ class Crawler:
         # Scroll to the bottom
         for _ in range(50):
             self.driver.execute_script("window.scrollBy(0,250)","")
+            time.sleep(0.1)
 
         self.take_information()
-
 
     def start(self):    #This method starts the scraping process.
         self.crawling=self.get_html()
