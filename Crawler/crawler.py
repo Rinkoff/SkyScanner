@@ -36,7 +36,7 @@ class Crawler:
         self.driver.get(self.url)
 
         #Allow All Coockies
-        btnCookies = self.driver.find_element(By.CSS_SELECTOR, "button.css-47sehv span").click()
+        btnCookies = self.driver.find_element(By.ID, "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll").click()
 
         #Open All Deals
         btnMoreDeals=self.driver.find_element(By.CSS_SELECTOR, ".show-more-deals").click()
